@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos Sort</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/bootstrap-css/bootstrap.css">
+    <link rel="stylesheet" href="src/css/header.css">
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/css/footer.css">
+</head>
+<body>
+    <header class="container-fluid booble">
+        <div class="container">
+            <img class="logo transparencia" src="src/img/1200px-Instituto_Federal_de_Mato_Grosso_do_Sul_-_Marca_Vertical_2015.svg.png" alt="">
+            <h1>Bubble Sort</h1>
+        </div>
+    </header>
+    <main>
+        <section class="container bloco__principal">
+            <nav class="navbar navbar-expand-lg bloco__principal-menu">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul>
+                        <a href="index.html"><li>home</li></a>
+                        <a href="bubble.html"><li class="pg-selecionada">BubbleSort (melhorado)</li></a>
+                        <a href="selection.html"><li>SelectionSort</li></a>
+                        <a href="insertion.html"><li>InsertionSort</li></a>
+                        <a href="merge.html"><li>MergeSort</li></a>
+                        <a href="quick.html"><li>QuickSort</li></a>
+                        <a href="heap.html"><li>HeapSort</li></a>
+                        <a href="shell.html"><li>ShellSort</li></a>
+                        <a href="coktail.html"><li>CoktailSort</li></a>
+                        <a href="gnome.html"><li>GnomeSort</li></a>
+                        <a href="stooge.html"><li>StoogeSort</li></a>
+                    </ul>           
+                </div>
+            </nav>
+            
+            <div class="bloco__principal-corpo">
+                <h2>Entendendo o Algorítmo Bubble Sort</h2>
+                    <p>Uma forma de trabalhar com o algoritmo Bubble Sorte é comparando os elementos adjacentes (dois a dois), por exemplo: compara-se a primeira posição do vetor com a segunda, na segunda iteração (repetição), compara-se a segunda posição do vetor com a terceira, e assim sucessivamente. De acordo com o algoritmo, podemos ordenar o vetor de forma crescente ou decrescente.</p>
+                    <p>O algoritmo Bubble Sort percorre todo o vetor diversas vezes, por isso, não é recomendado o uso dele para aplicações que requerem velocidade ou trabalhem com uma grande quantidade de dados. </p>
+                <h3>Como tudo funciona</h3>
+                    <img class="ilustracao" src="src/img/buble.gif" alt="Bubble Sort">   
+                <!-- indentacao errada para manter a estrutura no codigo  -->
+                <h4>Mãos a obra:</h4>
+<div class="codigos">  
+
+    <pre>
+<code>
+    import java.util.ArrayList;
+    import java.util.Random;
+    import java.util.Scanner;
+    
+    
+    public class NewClass {
+        public static void main(String[] args) {
+            Scanner leia = new Scanner(System.in);
+            ArrayList<Integer> lista = new ArrayList<>();
+            int cont = 1;
+            
+            Random rand = new Random();
+            int n = rand.nextInt(100);
+            lista.add(n);
+            
+            quickSort(lista, 0, lista.size() - 1);
+            
+            for (Integer integer : lista) {
+                System.out.println(integer + ", ");
+                if (cont % 15 == 0) {
+                    System.out.println(" \n");
+                }
+                cont++;
+            }
+        }
+        
+        /* ---------------------- Algoritimo De Ordenação ---------------------- */
+        
+        public static void quickSort(ArrayList<Integer> lista, int a, int z) {
+            if (z > a) {
+                int indexPivo = dividir(lista, a, z);
+                quickSort(lista, a, indexPivo - 1);
+                quickSort(lista, indexPivo + 1, z);
+            }
+        }
+    
+        public static int dividir(ArrayList<Integer> lista, int a, int z) {
+            int pivo, pontEsq, pontDir = z;
+            pontEsq = a + 1;
+            pivo = lista.get(a);
+    
+            while (pontEsq <= pontDir) {
+                while (pontEsq <= pontDir && lista.get(pontEsq) <= pivo) {
+                    pontEsq++;
+                }
+    
+                while (pontDir >= pontEsq && lista.get(pontDir) > pivo) {
+                    pontDir--;
+                }
+    
+                if (pontEsq < pontDir) {
+                    trocar(lista, pontDir, pontEsq);
+                    pontEsq++;
+                    pontDir--;
+                }
+            }
+    
+            trocar(lista, a, pontDir);
+            return pontDir;
+        }
+    
+        public static void trocar(ArrayList<Integer> lista, int i, int j) {
+            int aux = lista.get(i);
+            lista.set(i, lista.get(j));
+            lista.set(j, aux);
+        }
+    }
+</code>
+    </pre>
+</div>   
+                <!-- //indentacao errada para manter a estrutura no codigo  -->    
+                <h5>Tabela de desenpenho:</h5>
+            </div>
+
+        </section>
+        
+
+    </main>
+    <footer>
+        <div class="container">
+            <img src="src/img/if-p.png" alt="">
+        </div>
+    </footer>
+    <script src="src/js/bootstrap-js/bootstrap.bundle.js"></script>
+    <script src="src/js/bootstrap-js/bootstrap.js"></script>
+</body>
+</html>

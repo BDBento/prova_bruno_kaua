@@ -1,0 +1,46 @@
+
+header{   
+    text-align: center;
+    height: auto;  
+    border-bottom: 1px gray solid;
+    opacity: .9;
+}
+.home{
+    background:url(../img/pexels-manuel-geissinger-325229.jpeg);
+}
+.booble{
+    background:url(../img/buble.jpeg);
+}
+.selection{
+    background:url(../img/selectionss.jpeg) center/cover no-repeat;  
+}
+.insertion{
+    background:url(../img/Insertion-Sort.png) center/cover no-repeat;
+}
+
+.home div,
+.booble div,
+.selection div,
+.insertion div{
+    display: flex;
+}
+
+.logo{
+    width: 10em;
+    height: 10em;
+    margin: auto 0;
+    padding: 5px;
+}
+.transparencia{
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+}
+.selection h1,.insertion h1{
+    color:black ;
+}
+header h1{
+    padding: 80px;
+    color: white;
+    font-family: 'Libre Baskerville', serif;
+    margin: auto;
+}
