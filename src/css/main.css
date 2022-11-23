@@ -11,13 +11,16 @@ main{
 .bloco__principal{
     display: grid;
     grid-template-columns: 1fr 3fr;
+
 }
 .navbar{
     padding: 0;
 }
-.bloco__principal-menu{
+.bloco__principal-menu {
     text-transform: uppercase;
     height: 520px;
+    animation-name: esquerda;
+    animation-duration: 2s;
 }
 .bloco__principal-menu ul{
     width: 100%;
@@ -40,7 +43,12 @@ a .pg-selecionada{
     padding: 30px;
     background-color: rgb(223, 221, 221);
     font-family: 'Times New Roman', Times, serif;
+    position: relative;
+    animation-name: direita;
+    animation-duration: 2s;
+    
 }
+
 a{
     text-decoration: none;
 }
@@ -80,4 +88,21 @@ pre code{
         width: 100vw;
     }
 
+}
+
+@keyframes direita{
+    from {
+        right:-1000px
+    }
+    to {
+        right:0px
+    }
+}
+@keyframes esquerda{
+    from {
+        left:-1000px
+    }
+    to {
+        left:0px
+    }
 }

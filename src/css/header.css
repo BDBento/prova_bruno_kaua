@@ -4,6 +4,7 @@ header{
     height: auto;  
     border-bottom: 1px gray solid;
     opacity: .9;
+    font-family: 'Pacifico',cursive;
 }
 .home{
     background:url(../img/pexels-manuel-geissinger-325229.jpeg);
@@ -41,6 +42,26 @@ header{
 header h1{
     padding: 80px;
     color: white;
-    font-family: 'Libre Baskerville', serif;
-    margin: auto;
+    font-family: 'arial';
+    font-weight: bold;
+    margin: auto;  
 }
+
+
+h1{
+    position: relative;
+    animation-name: move_titulo;
+    animation-duration: 3s;
+    
+}
+@keyframes move_titulo{
+    from {
+        top:-200px
+    }
+    to {
+        top:0px
+    }
+}
+
+
+
