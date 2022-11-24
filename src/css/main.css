@@ -70,6 +70,33 @@ pre code{
     color: #fff;
 }
 
+.tabelas{
+    display: flex;
+    gap: 20px;
+}
+.cards{
+    padding: 10px;
+    min-width: 50%;
+    height: 300px;
+    border: solid red 1px;
+}
+
+@keyframes direita{
+    from {
+        right:-1000px
+    }
+    to {
+        right:0px
+    }
+}
+@keyframes esquerda{
+    from {
+        left:-1000px
+    }
+    to {
+        left:0px
+    }
+}
 
 @media (max-width:750px){
     .bloco__principal{
@@ -91,33 +118,6 @@ pre code{
 
 }
 
-@keyframes direita{
-    from {
-        right:-1000px
-    }
-    to {
-        right:0px
-    }
-}
-@keyframes esquerda{
-    from {
-        left:-1000px
-    }
-    to {
-        left:0px
-    }
-}
-
-.tabelas{
-    display: flex;
-    gap: 20px;
-}
-.cards{
-    
-    min-width: 50%;
-    height: 300px;
-    border: solid red 1px;
-}
 @media(max-width:1200px){
     .tabelas{
         flex-direction: column;
