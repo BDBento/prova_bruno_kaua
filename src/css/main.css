@@ -77,9 +77,11 @@ pre code{
 .cards{
     padding: 10px;
     min-width: 50%;
-    height: 300px;
-    border: solid red 1px;
+    height: auto;
+    background-color: #fff;
+    border-radius: 4px;
 }
+
 
 @keyframes direita{
     from {
@@ -115,7 +117,9 @@ pre code{
     .bloco__principal-corpo{
         width: 100vw;
     }
-
+    #curve_chart{
+        width: 100%;
+    }
 }
 
 @media(max-width:1200px){

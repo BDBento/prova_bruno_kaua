@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Metodos Sort</title>
+    <title>Selection Sort</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="src/css/header.css">
     <link rel="stylesheet" href="src/css/main.css">
     <link rel="stylesheet" href="src/css/footer.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="src/js/grafico.js"></script>
 </head>
 <body>
     <header class="container-fluid selection">
@@ -47,7 +49,7 @@
             
             <div class="bloco__principal-corpo">
                 <h2>Selection Sort</h2>
-                    <p>algoritmo é baseado em se passar sempre o menor valor do vetor para a primeira posição (ou o maior dependendo da ordem requerida), depois o segundo menor valor para a segunda posição e assim sucessivamente, até os últimos dois elementos.</p> 
+                    <p>O algoritmo é baseado em se passar sempre o menor valor do vetor para a primeira posição (ou o maior dependendo da ordem requerida), depois o segundo menor valor para a segunda posição e assim sucessivamente, até os últimos dois elementos.</p> 
                 <h3>Como tudo funciona</h3>
                     <img class="ilustracao" src="src/img/Selection-Sort.gif" alt="">   
                 <!-- indentacao errada para manter a estrutura no codigo  -->
@@ -63,7 +65,52 @@
     </pre>
 </div>   
                 <!-- //indentacao errada para manter a estrutura no codigo  -->    
-                <h5>Tabela de desenpenho:</h5>
+                
+                <section id="section-tabelas" class="container section-tabelas">
+                    <h5>Tabela de desenpenho:</h5>
+                    <div class="tabelas">
+                        <div class="cards card-direita">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Selection Sort</th>
+                                        <th scope="col">1.000</th>
+                                        <th scope="col">10.000</th>
+                                        <th scope="col">500.000</th>
+                                        <th scope="col">1.000.000</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-group-divider">
+                                    <tr> 
+                                        <th scope="row">Bom</th>
+                                        <td>0,0395172</td>
+                                        <td>0,1438769</td>
+                                        <td>271,8567817</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Médio</th>
+                                        <td>0,0345794</td>
+                                        <td>0,3685115</td>
+                                        <td>2411,6839104</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Ruim</th>
+                                        <td>0,0021276</td>
+                                        <td>0,1964097</td>
+                                        <td>543,8211861</td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="cards card-esquerda">
+                            <div id="selection_grafico"></div>
+                        </div>
+                    </div>
+                </section>
+
             </div>
 
         </section>

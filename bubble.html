@@ -4,21 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Metodos Sort</title>
+    <title>Bubble Sort</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/css/reset.css">
     <link rel="stylesheet" href="src/css/bootstrap-css/bootstrap.css">
+    <link rel="stylesheet"href="bower_components/chartist/dist/chartist.min.css">
     <link rel="stylesheet" href="src/css/header.css">
     <link rel="stylesheet" href="src/css/main.css">
     <link rel="stylesheet" href="src/css/footer.css">
+    <link rel="stylesheet"href="bower_components/chartist/dist/chartist.min.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="src/js/grafico.js"></script>
+
 </head>
 <body>
     <header class="container-fluid booble">
         <div class="container">
             <img class="logo transparencia" src="src/img/1200px-Instituto_Federal_de_Mato_Grosso_do_Sul_-_Marca_Vertical_2015.svg.png" alt="">
-            <h1>Bubble Sort</h1>
+            <h1 meta-burble >Bubble Sort</h1>
         </div>
     </header>
     <main>
@@ -128,12 +133,54 @@
     </pre>
 </div>   
                 <!-- //indentacao errada para manter a estrutura no codigo  -->    
-                <h5>Tabela de desenpenho:</h5>
-            </div>
+                
+                <section id="section-tabelas" class="container section-tabelas">
+                    <h5>Tabela de desenpenho:</h5>
+                    <div class="tabelas">
+                        <div class="cards card-direita">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Bubble Sort</th>
+                                        <th scope="col">1.000</th>
+                                        <th scope="col">10.000</th>
+                                        <th scope="col">500.000</th>
+                                        <th scope="col">1.000.000</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-group-divider">
+                                    <tr> 
+                                        <th scope="row">Bom</th>
+                                        <td>0,000172</td>
+                                        <td>0,0077947</td>
+                                        <td>0.046261</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Médio</th>
+                                        <td>0,0130364</td>
+                                        <td>1,2210467</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Ruim</th>
+                                        <td>0,0302035</td>
+                                        <td>0,6685959</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="cards card-esquerda">
+                            <div id="bubble_grafico"></div>
+                        </div>
+                    </div>
+                </section>
 
         </section>
         
-
     </main>
     <footer>
         <div class="container">
@@ -142,5 +189,6 @@
     </footer>
     <script src="src/js/bootstrap-js/bootstrap.bundle.js"></script>
     <script src="src/js/bootstrap-js/bootstrap.js"></script>
+    <script type="module" src="src/js/script.js"></script>
 </body>
 </html>

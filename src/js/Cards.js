@@ -5,6 +5,9 @@ class Cards{
     calculoScroll(){
         const posicao = document.getElementById('section-tabelas').getBoundingClientRect()['y'];
         console.log(posicao);
+        if(posicao <= 1000){
+            
+        }
     }
 }
 
