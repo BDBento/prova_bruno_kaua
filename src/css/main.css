@@ -130,3 +130,6 @@ pre code{
         width: 100%;
     }
 }
+ul{
+    padding-left: 0;
+}

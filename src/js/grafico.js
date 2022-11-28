@@ -1,12 +1,13 @@
+
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(graf);
+
 let options = {
     title: '',
     curveType: 'function',
     legend: { position: 'bottom' },
     colors: ['#185e00', '#ffcd00', '#d50908']
 };
-
-google.charts.load('current', {'packages':['corechart']});
-google.charts.setOnLoadCallback(graf);
 
 function graf() {
     // bom
