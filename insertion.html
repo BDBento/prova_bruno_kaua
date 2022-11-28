@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="src/css/header.css">
     <link rel="stylesheet" href="src/css/main.css">
     <link rel="stylesheet" href="src/css/footer.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="src/js/grafico.js"></script>
+
 </head>
 <body>
     <header class="container-fluid insertion">
@@ -40,7 +43,7 @@
                         <a href="shell.html"><li>ShellSort</li></a>
                         <a href="coktail.html"><li>CoktailSort</li></a>
                         <a href="gnome.html"><li>GnomeSort</li></a>
-                        <a href="stooge.html"><li>StoogeSort</li></a>
+                        <a href="comb.html"><li>CombSort</li></a>
                     </ul>           
                 </div>
             </nav>
@@ -97,30 +100,30 @@
                 <tbody class="table-group-divider">
                     <tr> 
                         <th scope="row">Bom</th>
-                        <td>0,0004833</td>
-                        <td>0,004389</td>
-                        <td>0,0390283</td>
-                        <td></td>
+                        <td class="bom1">0.0004833</td>
+                        <td class="bom2">0.004389</td>
+                        <td class="bom3">0.0390283</td>
+                        <td class="bom4">0</td>
                     </tr>
                     <tr>
                         <th scope="row">Médio</th>
-                        <td>0,0349028</td>
-                        <td>0,1515631</td>
-                        <td>1409,825029</td>
-                        <td></td>
+                        <td class="medio1">0.0349028</td>
+                        <td class="medio2">0.1515631</td>
+                        <td class="medio3">1409.825029</td>
+                        <td class="medio4">0</td>
                     </tr>
                     <tr>
                         <th scope="row">Ruim</th>
-                        <td>0,0534072</td>
-                        <td>0,2236758</td>
-                        <td>538,7942957</td>
-                        <td></td>
+                        <td class="ruim1">0.0534072</td>
+                        <td class="ruim2">0.2236758</td>
+                        <td class="ruim3">538.7942957</td>
+                        <td class="ruim4">0</td>
                     </tr>
                 </tbody>
             </table>
         </div>
         <div class="cards card-esquerda">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit expedita at iste sapiente culpa. Expedita dignissimos nemo nostrum consectetur quasi quod saepe? Quaerat, ipsum praesentium pariatur at non itaque recusandae.
+            <div id="grafico"></div>
         </div>
     </div>
 </section>

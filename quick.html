@@ -10,12 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/css/reset.css">
     <link rel="stylesheet" href="src/css/bootstrap-css/bootstrap.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="src/js/grafico.js"></script>
     <link rel="stylesheet" href="src/css/header.css">
     <link rel="stylesheet" href="src/css/main.css">
     <link rel="stylesheet" href="src/css/footer.css">
 </head>
 <body>
-    <header class="container-fluid insertion">
+    <header class="container-fluid quick">
         <div class="container">
             <img class="logo transparencia" src="src/img/1200px-Instituto_Federal_de_Mato_Grosso_do_Sul_-_Marca_Vertical_2015.svg.png" alt="">
             <h1>Quick Sort</h1> 
@@ -40,7 +42,7 @@
                         <a href="shell.html"><li>ShellSort</li></a>
                         <a href="coktail.html"><li>CoktailSort</li></a>
                         <a href="gnome.html"><li>GnomeSort</li></a>
-                        <a href="stooge.html"><li>StoogeSort</li></a>
+                        <a href="comb.html"><li>CombSort</li></a>
                     </ul>           
                 </div>
             </nav>
@@ -83,30 +85,30 @@
                                 <tbody class="table-group-divider">
                                     <tr> 
                                         <th scope="row">Bom</th>
-                                        <td>0.0104072</td>
-                                        <td>0.0069883</td>
-                                        <td>0.3392144</td>
-                                        <td>0.6794286</td>
+                                        <td class="bom1">0.0104072</td>
+                                        <td class="bom2">0.0069883</td>
+                                        <td class="bom3">0.3392144</td>
+                                        <td class="bom4">0.6794286</td>
                                     </tr>
                                     <tr>
                                         <th scope="row">Médio</th>
-                                        <td>0.0019946</td>
-                                        <td>0.0112419</td>
-                                        <td>0.6202614</td>
-                                        <td>2.3110557</td>
+                                        <td class="medio1">0.0019946</td>
+                                        <td class="medio2">0.0112419</td>
+                                        <td class="medio3">0.6202614</td>
+                                        <td class="medio4">2.3110557</td>
                                     </tr>
                                     <tr>
                                         <th scope="row">Ruim</th>
-                                        <td>0.0007434</td>
-                                        <td>0.005765</td>
-                                        <td>0.330906</td>
-                                        <td>0.6851811</td>
+                                        <td class="ruim1">0.0007434</td>
+                                        <td class="ruim2">0.005765</td>
+                                        <td class="ruim3">0.330906</td>
+                                        <td class="ruim4">0.6851811</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                         <div class="cards card-esquerda">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit expedita at iste sapiente culpa. Expedita dignissimos nemo nostrum consectetur quasi quod saepe? Quaerat, ipsum praesentium pariatur at non itaque recusandae.
+                            <div id="grafico"></div>
                         </div>
                     </div>
                 </section>

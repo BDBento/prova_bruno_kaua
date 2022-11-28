@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/css/reset.css">
     <link rel="stylesheet" href="src/css/bootstrap-css/bootstrap.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="src/js/grafico.js"></script>
     <link rel="stylesheet" href="src/css/header.css">
     <link rel="stylesheet" href="src/css/main.css">
     <link rel="stylesheet" href="src/css/footer.css">
@@ -40,7 +42,7 @@
                         <a href="shell.html"><li>ShellSort</li></a>
                         <a href="coktail.html"><li>CoktailSort</li></a>
                         <a href="gnome.html"><li>GnomeSort</li></a>
-                        <a href="stooge.html"><li>StoogeSort</li></a>
+                        <a href="comb.html"><li>CombSort</li></a>
                     </ul>           
                 </div>
             </nav>
@@ -70,7 +72,50 @@
     </pre>
 </div>   
                 <!-- //indentacao errada para manter a estrutura no codigo  -->    
-                <h5>Tabela de desenpenho:</h5>
+                <section id="section-tabelas" class="container section-tabelas">
+                    <h5>Tabela de desenpenho:</h5>
+                    <div class="tabelas">
+                        <div class="cards card-direita">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Merge Sort</th>
+                                        <th scope="col">1.000</th>
+                                        <th scope="col">10.000</th>
+                                        <th scope="col">500.000</th>
+                                        <th scope="col">1.000.000</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-group-divider">
+                                    <tr> 
+                                        <th scope="row">Bom</th>
+                                        <td class="bom1">0.0597083</td>
+                                        <td class="bom2">1.1589879</td>
+                                        <td class="bom3">2103.9774235</td>
+                                        <td class="bom4">10905.2476831</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Médio</th>
+                                        <td class="medio1">0.0263602</td>
+                                        <td class="medio2">1.0561847</td>
+                                        <td class="medio3">2135.3927107</td>
+                                        <td class="medio4">10638.8583866</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Ruim</th>
+                                        <td class="ruim1">0.0105934</td>
+                                        <td class="ruim2">0.8276113</td>
+                                        <td class="ruim3">2082.6098942</td>
+                                        <td class="ruim4">12852.540375</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="cards card-esquerda">
+                            <div id="grafico"></div>
+                        </div>
+                    </div>
+                </section>
             </div>
 
         </section>
