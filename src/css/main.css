@@ -123,6 +123,9 @@ pre code{
     #curve_chart{
         width: 100%;
     }
+    .section-tabelas{
+        font-size: 0.8em;
+    }
 }
 
 @media(max-width:1200px){
