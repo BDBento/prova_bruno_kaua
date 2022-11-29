@@ -123,8 +123,8 @@ pre code{
     #curve_chart{
         width: 100%;
     }
-    .section-tabelas{
-        font-size: 0.8em;
+    .table{
+        font-size: 0.7em;
     }
     .container{
         --bs-gutter-x:0;
