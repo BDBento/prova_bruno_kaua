@@ -49,11 +49,13 @@
             
             <div class="bloco__principal-corpo">
                 <h2>Heap Sort</h2>
-                <p></p> 
+                <p>Tem um desempenho em tempo de execução muito bom em conjuntos ordenados aleatoriamente, tem um uso de memória bem comportado e o seu desempenho em pior cenário é praticamente igual ao desempenho em cenário médio. Alguns algoritmos de ordenação rápidos têm desempenhos espectacularmente ruins no pior cenário, quer em tempo de execução, quer no uso da memória.</p>
+                <p> O heapsort trabalha no lugar e o tempo de execução em pior cenário para ordenar n elementos é de O (n lg n). Lê-se logaritmo (ou log) de "n" na base 2. Para valores de n, razoavelmente grandes, o termo log n é quase constante, de modo que o tempo de ordenação é quase linear com o número de itens a ordenar.</p>
+                <p>O heapsort não é um algoritmo de ordenação estável. Porém, é possível adaptar a estrutura a ser ordenada de forma a tornar a ordenação estável. Cada elemento da estrutura adaptada deve ficar no formato de um par (elemento original, índice original). Assim, caso dois elementos sejam iguais, o desempate ocorrerá pelo índice na estrutura original.</p>
                 
 
                 <h3>Como tudo funciona</h3>
-                    <img class="ilustracao" src="src/img/Quicksort-example.gif" alt="">   
+                    <img class="ilustracao" src="src/img/heap-xlg.gif" alt="">   
                 <!-- indentacao errada para manter a estrutura no codigo  -->
                 <h4>Mãos a obra:</h4>
 <div class="codigos">  

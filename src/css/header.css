@@ -28,6 +28,19 @@ header{
 .quick{
     background:url(../img/quicksort-banner@3600x1600-2048x910.png) center/cover no-repeat;
 }
+.heap{
+    background:url(../img/amontuar.webp) center/cover no-repeat;
+}
+.shell{
+    background:url(../img/Shell-small-banner2.jpg) center/cover no-repeat;
+}
+.coktail{
+    background:url(../img/cocktail-banner-new2.jpg) center/cover no-repeat;
+}
+.gnome{
+    background:url(../img/gnomo.webp) center/cover no-repeat;
+}
+
 
 .home div,
 .booble div,
@@ -55,7 +68,8 @@ header{
 }
 .selection h1,
 .insertion h1,
-.quick h1{
+.quick h1,
+.shell h1{
     color:black ;
 }
 header h1{
