@@ -40,7 +40,9 @@ header{
 .gnome{
     background:url(../img/gnomo.webp) center/cover no-repeat;
 }
-
+.comb{
+    background:url(../img/combo.jpeg) center/cover no-repeat;
+}
 
 .home div,
 .booble div,
