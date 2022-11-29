@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shell Sort</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/bootstrap-css/bootstrap.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="src/js/grafico.js"></script>
+    <link rel="stylesheet" href="src/css/header.css">
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/css/footer.css">
+</head>
+<body>
+    <header class="container-fluid shell">
+        <div class="container">
+            <img class="logo transparencia" src="src/img/1200px-Instituto_Federal_de_Mato_Grosso_do_Sul_-_Marca_Vertical_2015.svg.png" alt="">
+            <h1>Shell Sort</h1> 
+        </div>
+    </header>
+    <main>
+        <section class="container bloco__principal">
+            <nav class="navbar navbar-expand-lg bloco__principal-menu">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul>
+                        <a href="index.html"><li>home</li></a>
+                        <a href="bubble.html"><li>BubbleSort (melhorado)</li></a>
+                        <a href="selection.html"><li>SelectionSort</li></a>
+                        <a href="insertion.html"><li>InsertionSort</li></a>
+                        <a href="merge.html"><li>MergeSort</li></a>
+                        <a href="quick.html"><li>QuickSort</li></a>
+                        <a href="heap.html"><li>HeapSort</li></a>
+                        <a href="shell.html"><li class="pg-selecionada">ShellSort</li></a>
+                        <a href="coktail.html"><li>CoktailSort</li></a>
+                        <a href="gnome.html"><li>GnomeSort</li></a>
+                        <a href="comb.html"><li>CombSort</li></a>
+                    </ul>           
+                </div>
+            </nav>
+            
+            <div class="bloco__principal-corpo">
+                <h2>Shell Sort</h2>
+                <p>Criado por Donald Shell em 1959,publicado pela Universidade de Cincinnati, Shell sort é o mais eficiente algoritmo de classificação dentre os de complexidade quadrática. É um refinamento do método de inserção direta.</p>
+                <p>O algoritmo difere do método de inserção direta pelo fato de no lugar de considerar o array a ser ordenado como um único segmento, ele considera vários segmentos sendo aplicado o método de inserção direta em cada um deles.<p>Basicamente o algoritmo passa várias vezes pela lista dividindo o grupo maior em menores. Nos grupos menores é aplicado o método da ordenação por inserção. Implementações do algoritmo.</p> 
+                <h3>Como tudo funciona</h3>
+                    <img class="ilustracao" src="src/img/shell-sort-algorithm2.png" alt="">   
+                <!-- indentacao errada para manter a estrutura no codigo  -->
+                <h4>Mãos a obra:</h4>
+<div class="codigos">  
+    <pre>
+<code>
+    
+
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium mollitia non quasi 
+    earum magni voluptates omnis! Perspiciatis commodi corporis, laborum quas blanditiis 
+    facilis accusantium voluptatem  minima accusamus, possimus, eaque illum.
+
+    
+</code>
+    </pre>
+</div>   
+                <!-- //indentacao errada para manter a estrutura no codigo  -->    
+                <section id="section-tabelas" class="container section-tabelas">
+                    <h5>Tabela de desenpenho:</h5>
+                    <div class="tabelas">
+                        <div class="cards card-direita">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Shell Sort</th>
+                                        <th scope="col">1.000</th>
+                                        <th scope="col">10.000</th>
+                                        <th scope="col">500.000</th>
+                                        <th scope="col">1.000.000</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-group-divider">
+                                    <tr> 
+                                        <th scope="row">Bom</th>
+                                        <td class="bom1">0.002998</td>
+                                        <td class="bom2">0.0406803</td>
+                                        <td class="bom3">0.2290975</td>
+                                        <td class="bom4">0.3457995</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Médio</th>
+                                        <td class="medio1">0.0059424</td>
+                                        <td class="medio2">0.0371491</td>
+                                        <td class="medio3">0.6072589</td>
+                                        <td class="medio4">1.1689568</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Ruim</th>
+                                        <td class="ruim1">0.0037655</td>
+                                        <td class="ruim2">0.0034402</td>
+                                        <td class="ruim3">0.2805287</td>
+                                        <td class="ruim4">0.2654818</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="cards card-esquerda">
+                            <div id="grafico"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </section>
+        
+
+    </main>
+    <footer>
+        <div class="container">
+            <img src="src/img/if-p.png" alt="">
+        </div>
+    </footer>
+    <script src="src/js/bootstrap-js/bootstrap.bundle.js"></script>
+    <script src="src/js/bootstrap-js/bootstrap.js"></script>
+</body>
+</html>
