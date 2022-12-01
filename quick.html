@@ -59,10 +59,80 @@
 <div class="codigos">  
     <pre>
 <code>
+    import java.util.ArrayList;
+    import java.util.Random;
+    import java.util.Scanner;
     
-
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium mollitia non quasi earum magni voluptates omnis! Perspiciatis commodi corporis, laborum quas blanditiis facilis accusantium voluptatem  minima accusamus, possimus, eaque illum.
-
+    public class QuickSort {
+    
+        public static void main(String[] args) {
+            Scanner leia = new Scanner(System.in);
+            ArrayList<Integer> lista = new ArrayList<>();
+            int cont = 1;
+    
+            for (int i = 0; i < 1000; i++) {
+                Random rand = new Random();
+                int n = rand.nextInt(1000);
+                lista.add(n);
+            }
+    
+            lista = quickSort(lista);
+    
+            for (Integer integer : lista) {
+                System.out.print(integer + ", ");
+                if (cont % 20 == 0) {
+                    System.out.println();
+                }
+                cont++;
+            }
+        }
+    
+        /* ---------------------- Algoritimo De Ordenação ---------------------- */
+    
+        private static ArrayList<Integer> quickSort(ArrayList<Integer> lista) {
+            int size = lista.size();
+            if (lista.size() <= 1) {
+                return lista;
+            }
+    
+            int middle = (int) Math.ceil((double) size / 2);
+            int pivot = lista.get(middle);
+    
+            ArrayList<Integer> less = new ArrayList<Integer>();
+            ArrayList<Integer> greater = new ArrayList<Integer>();
+    
+            for (int i = 0; i < size; i++) {
+                if (lista.get(i) <= pivot) {
+                    if (i == middle) {
+                        continue;
+                    }
+                    less.add(lista.get(i));
+                } else {
+                    greater.add(lista.get(i));
+                }
+            }
+    
+            return concatenate(quickSort(less), pivot, quickSort(greater));
+        }
+        
+    
+        private static ArrayList<Integer> concatenate(ArrayList<Integer> less, int pivot, ArrayList<Integer> greater) {
+    
+            ArrayList<Integer> aux = new ArrayList<Integer>();
+    
+            for (int i = 0; i < less.size(); i++) {
+                aux.add(less.get(i));
+            }
+    
+            aux.add(pivot);
+    
+            for (int i = 0; i < greater.size(); i++) {
+                aux.add(greater.get(i));
+            }
+    
+            return aux;
+        }
+    }
     
 </code>
     </pre>

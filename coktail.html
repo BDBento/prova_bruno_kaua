@@ -60,13 +60,71 @@
 <div class="codigos">  
     <pre>
 <code>
+    import java.util.ArrayList;
+    import java.util.Random;
+    import java.util.Scanner;
     
-
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium mollitia non quasi 
-    earum magni voluptates omnis! Perspiciatis commodi corporis, laborum quas blanditiis 
-    facilis accusantium voluptatem  minima accusamus, possimus, eaque illum.
-
+    public class CoktailSort {
     
+        public static void main(String[] args) {
+            Scanner leia = new Scanner(System.in);
+            ArrayList<Integer> lista = new ArrayList<>();
+            int cont = 1;
+    
+            for (int i = 0; i < 1000; i++) {
+                Random rand = new Random();
+                int n = rand.nextInt(1000);
+                lista.add(n);
+            }
+    
+            coktailSort(lista);
+    
+            for (Integer integer : lista) {
+                System.out.print(integer + ", ");
+                if (cont % 20 == 0) {
+                    System.out.println();
+                }
+                cont++;
+            }
+        }
+    
+        /* ---------------------- Algoritimo De Ordenação ---------------------- */
+        private static void coktailSort(ArrayList<Integer> lista) {
+            boolean swapped = true;
+            int start = 0;
+            int end = lista.size();
+    
+            while (swapped == true) {
+                swapped = false;
+    
+                for (int i = start; i < end - 1; ++i) {
+                    if (lista.get(i) > lista.get(i + 1)) {
+                        int temp = lista.get(i);
+                        lista.set(i, lista.get(i + 1));
+                        lista.set(i + 1, temp);
+                        swapped = true;
+                    }
+                }
+    
+                if (swapped == false) {
+                    break;
+                }
+                swapped = false;
+    
+                end = end - 1;
+    
+                for (int i = end - 1; i >= start; i--) {
+                    if (lista.get(i) > lista.get(i + 1)) {
+                        int temp = lista.get(i);
+                        lista.set(i, lista.get(i + 1));
+                        lista.set(i + 1, temp);
+                        swapped = true;
+                    }
+                }
+                start = start + 1;
+            }
+        }
+    }    
 </code>
     </pre>
 </div>   

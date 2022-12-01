@@ -61,13 +61,71 @@
 <div class="codigos">  
     <pre>
 <code>
+    import java.util.ArrayList;
+    import java.util.Random;
+    import java.util.Scanner;
     
-
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium mollitia non quasi 
-    earum magni voluptates omnis! Perspiciatis commodi corporis, laborum quas blanditiis 
-    facilis accusantium voluptatem  minima accusamus, possimus, eaque illum.
-
+    public class heapSort {
     
+        public static void main(String[] args) {
+            Scanner leia = new Scanner(System.in);
+            ArrayList<Integer> lista = new ArrayList<>();
+            int cont = 1;
+    
+            for (int i = 0; i < 1000; i++) {
+                Random rand = new Random();
+                int n = rand.nextInt(1000);
+                lista.add(n);
+            }
+    
+            heapSort(lista);
+    
+            for (Integer integer : lista) {
+                System.out.print(integer + ", ");
+                if (cont % 20 == 0) {
+                    System.out.println();
+                }
+                cont++;
+            }
+        }
+    
+        /* ---------------------- Algoritimo De Ordenação ---------------------- */
+        public static void heapSort(ArrayList<Integer> lista) {
+            int T = lista.size();
+            for (int i = T / 2 - 1; i >= 0; i--) {
+                montar(lista, T, i);
+            }
+            for (int i = T - 1; i > 0; i--) {
+                int aux = lista.get(0);
+                lista.set(0, lista.get(i));
+                lista.set(i, aux);
+    
+                montar(lista, i, 0);
+            }
+        }
+    
+        public static void montar(ArrayList<Integer> lista, int T, int i) {
+            int maior = i;
+            int l = 2 * i + 1;
+            int r = 2 * i + 2;
+    
+            if (l < T && lista.get(l) > lista.get(maior)) {
+                maior = l;
+            }
+    
+            if (r < T && lista.get(r) > lista.get(maior)) {
+                maior = r;
+            }
+    
+            if (maior != i) {
+                int aux = lista.get(i);
+                lista.set(i, lista.get(maior));
+                lista.set(maior, aux);
+    
+                montar(lista, T, maior);
+            }
+        }
+    }    
 </code>
     </pre>
 </div>   

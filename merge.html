@@ -63,11 +63,82 @@
 <div class="codigos">  
     <pre>
 <code>
-    
+    import java.util.ArrayList;
+    import java.util.Random;
+    import java.util.Scanner;
 
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium mollitia non quasi earum magni voluptates omnis! Perspiciatis commodi corporis, laborum quas blanditiis facilis accusantium voluptatem  minima accusamus, possimus, eaque illum.
+    public class MergeSort {
 
-    
+        public static void main(String[] args) {
+            Scanner leia = new Scanner(System.in);
+            ArrayList<Integer> lista = new ArrayList<>();
+            int cont = 1;
+
+            for (int i = 0; i < 1000; i++) {
+                Random rand = new Random();
+                int n = rand.nextInt(1000);
+                lista.add(n);
+            }
+
+            MergeSort(lista, 0, lista.size() - 1);
+
+            for (Integer integer : lista) {
+                System.out.print(integer + ", ");
+                if (cont % 20 == 0) {
+                    System.out.println();
+                }
+                cont++;
+            }
+        }
+
+        /* ---------------------- Algoritimo De Ordenação ---------------------- */
+
+        public static void popula(int tot, ArrayList<Integer> lista2) {
+            for (int i = 0; i < tot; i++) {
+                lista2.add(0);
+            }
+        }
+
+        public static void MergeSort(ArrayList<Integer> lista, int a, int z) {
+            int m;
+            if (a < z) {
+                m = (a + z) / 2;
+                MergeSort(lista, a, m);
+                MergeSort(lista, m + 1, z);
+                intercala(lista, a, m, z);
+            }
+        }
+
+        public static void intercala(ArrayList<Integer> lista, int a, int m, int z) {
+            int poslivre, iniL1, iniL2, i;
+            ArrayList<Integer> lista2 = new ArrayList<>();
+            popula(lista.size(), lista2);
+            iniL1 = a;
+            iniL2 = m + 1;
+            poslivre = a;
+            while (iniL1 <= m && iniL2 <= z) {
+                if (lista.get(iniL1) <= lista.get(iniL2)) {
+                    lista2.set(poslivre, lista.get(iniL1));
+                    iniL1++;
+                } else {
+                    lista2.set(poslivre, lista.get(iniL2));
+                    iniL2++;
+                }
+                poslivre++;
+            }
+            for (i = iniL1; i <= m; i++) {
+                lista2.set(poslivre, lista.get(i));
+                poslivre++;
+            }
+            for (i = iniL2; i <= z; i++) {
+                lista2.set(poslivre, lista.get(i));
+                poslivre++;
+            }
+            for (i = a; i <= z; i++) {
+                lista.set(i, lista2.get(i));
+            }
+        }
+    }
 </code>
     </pre>
 </div>   
