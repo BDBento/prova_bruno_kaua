@@ -19,35 +19,63 @@
 </head>
 <body>
     <header class="container-fluid insertion">
-        <div class="container">
+
+            <nav class="navbar bg-light fixed-top bloco__principal-menu">
+                <div class="container">
+                  
+                  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    Menu <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                      <h5 class="offcanvas-title estou-aqui" id="offcanvasNavbarLabel">InsertionSort</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
+                          </li>
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="bubble.html">BubbleSort (melhorado)</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="selection.html">SelectionSort</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="insertion.html">InsertionSort</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="merge.html">MergeSort</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="quick.html">QuickSort</a>
+                        </li><li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="heap.html">HeapSort</a>
+                        </li><li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="shell.html">ShellSort</a>
+                        </li><li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="coktail.html">CoktailSort</a>
+                        </li><li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="gnome.html">GnomeSort</a>
+                        </li><li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="comb.html">CombSort</a>
+                        </li>
+    
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+            </nav>
+
+        <div class="container banner-flex">
             <img class="logo transparencia" src="src/img/1200px-Instituto_Federal_de_Mato_Grosso_do_Sul_-_Marca_Vertical_2015.svg.png" alt="">
             <h1>Insertion Sort</h1> 
         </div>
     </header>
     <main>
         <section class="container bloco__principal">
-            <nav class="navbar navbar-expand-lg bloco__principal-menu">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul>
-                        <a href="index.html"><li>home</li></a>
-                        <a href="bubble.html"><li>BubbleSort (melhorado)</li></a>
-                        <a href="selection.html"><li>SelectionSort</li></a>
-                        <a href="insertion.html"><li class="pg-selecionada">InsertionSort</li></a>
-                        <a href="merge.html"><li>MergeSort</li></a>
-                        <a href="quick.html"><li>QuickSort</li></a>
-                        <a href="heap.html"><li>HeapSort</li></a>
-                        <a href="shell.html"><li>ShellSort</li></a>
-                        <a href="coktail.html"><li>CoktailSort</li></a>
-                        <a href="gnome.html"><li>GnomeSort</li></a>
-                        <a href="comb.html"><li>CombSort</li></a>
-                    </ul>           
-                </div>
-            </nav>
-            
+ 
             <div class="bloco__principal-corpo">
                 <h2>Insertion Sort</h2>
                     <p>O Insertion Sort tem como rotina base a inserção ordenada. A ideia é executar várias vezes essa rotina para ordenar um array.</p> 
@@ -56,7 +84,7 @@
 
 
                 <h3>Como tudo funciona</h3>
-                    <img class="ilustracao" src="src/img/insertion-sort-in-java.gif" alt="">   
+                    <img class="ilustracao rounded mx-auto d-block" src="src/img/insertion-sort-in-java.gif" alt="">   
                 <!-- indentacao errada para manter a estrutura no codigo  -->
                 <h4>Mãos a obra:</h4>
 <div class="codigos">  
