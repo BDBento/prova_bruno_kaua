@@ -9,9 +9,23 @@ header{
     border-bottom: 1px gray solid;
     opacity: .9;
 }
-
+.banner-flex{
+    display: flex;
+}
+.navbar-toggler{
+    color:
+}
+.estou-aqui{
+    margin-top: 2em;
+}
+.btn-close{
+    float: right;
+    top: -50px;
+    position: relative;
+}
 .bloco__principal-menu {
     text-transform: uppercase;
+    font-weight: bold;
 }
 .navbar-nav .nav-link.active{
     color: #fff;
@@ -27,8 +41,8 @@ header{
 }
 .bloco__principal-menu li{
     padding: 5px;
-    border: rgb(112, 112, 112) 1px solid;
-    background-color: rgb(31, 91, 58);
+    border: #fff 1px solid;
+    background-color: #89c33d;
     color: #fff;
     border-radius: 5px;
     width: 100%;
@@ -77,25 +91,14 @@ a .pg-selecionada{
     background:url(../img/combo.jpeg) center/cover no-repeat;
 }
 
-/* .home div,
-.booble div,
-.selection div,
-.insertion div,
-.merge div,
-.quick div,
-.heap div,
-.shell div,
-.coktail div,
-.gnome div,
-.comb div{
-    display: flex;
-} */
-
 .logo{
     width: 10em;
     height: 10em;
     margin: 80px 0 20px;
     padding: 5px;
+    animation-name: move_titulo;
+    animation-duration: 3s;
+    position: relative;
 }
 .transparencia{
     background-color: rgba(255, 255, 255, 0.6);
@@ -119,8 +122,12 @@ header h1{
 h1{
     position: relative;
     animation-name: move_titulo;
-    animation-duration: 3s;
+    animation-duration: 2s;
     
+}
+.navbar{
+    animation-name: move_titulo;
+    animation-duration: 1s;
 }
 @keyframes move_titulo{
     from {
@@ -149,4 +156,13 @@ h1{
     .logo{
         margin-top: 90px;
     }
+}
+.bg-verde{
+ background-color: rgb(112, 112, 112);
+}
+.navbar-toggler{
+    color: #fff;
+    border: #fff solid;
+    background-color: #89c33d;
+    font-weight: bold;
 }
