@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparacao dos metodos sort</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/bootstrap-css/bootstrap.css">
+    <link rel="stylesheet" href="src/css/header.css">
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/css/footer.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="src/js/grafico-bom.js"></script>
+
+</head>
+<body>
+    <header class="container-fluid insertion">
+
+            <nav class="navbar bg-light fixed-top bloco__principal-menu">
+                <div class="container">
+                  
+                  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    Menu <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                      <h5 class="offcanvas-title estou-aqui" id="offcanvasNavbarLabel">Conclusão</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
+                          </li>
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="bubble.html">BubbleSort (melhorado)</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="selection.html">SelectionSort</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="insertion.html">InsertionSort</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="merge.html">MergeSort</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="quick.html">QuickSort</a>
+                        </li><li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="heap.html">HeapSort</a>
+                        </li><li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="shell.html">ShellSort</a>
+                        </li><li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="coktail.html">CoktailSort</a>
+                        </li><li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="gnome.html">GnomeSort</a>
+                        </li><li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="comb.html">CombSort</a>
+                        </li>
+                        </li><li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="coparacao.html">Conclusão</a>
+                        </li>
+    
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+            </nav>
+
+        <div class="container banner-flex">
+            <img class="logo transparencia" src="src/img/1200px-Instituto_Federal_de_Mato_Grosso_do_Sul_-_Marca_Vertical_2015.svg.png" alt="">
+            <h1>comparação dos métodos sort</h1> 
+        </div>
+    </header>
+    <main>
+        <section class="container bloco__principal">
+ 
+            <div class="bloco__principal-corpo">
+                <h2>Como foi feita a comparação</h2>
+                 
+               <p> A comparacao foi feita levando as consideracao de Melhor caso, pior caso e caso médio e como dito no inicio de nosso trabalho na ciência da computação, melhor caso, pior caso, e o caso médio de um determinado algoritmo, expressa a quantidade de recurso usado nesse algoritmo, no mínimo, no máximo e em média, respectivamente. Normalmente, o recurso a ser considerado é o tempo de execução, isto é, complexidade do tempo, porém poderia ser também a quantidade de memória usada ou outros recursos.</p>
+
+                <p>No tempo real da computação, o pior caso em tempo de execução é muitas vezes motivo de especial preocupação, pois é importante saber quanto tempo pode ser necessário no pior caso para garantir que um algoritmo sempre termine no tempo.</p> 
+                    
+                <p>O desempenho médio e o desempenho do pior caso são os mais utilizados na analíse de algoritmo. O menos usado é o desempenho do melhor caso. Porém existe uso para ele: por exemplo, quando se conhece os melhores casos das tarefas individuais, eles podem ser usados para melhorar a precisão da análise do pior caso. Cientistas da computação usam técnicas de análise probabilística, especialmente a do valor esperado, para determinar o tempos de execução esperado.</p>
+ 
+           
+                <section id="section-tabelas" class="container section-tabelas">
+                    <h5>Tabela de desenpenho para os casos bons :</h5>
+                    <div class="">
+                        <div class="cards card-overflow">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Metodo</th>
+                                        <th scope="col">1.000</th>
+                                        <th scope="col">10.000</th>
+                                        <th scope="col">500.000</th>
+                                        <th scope="col">1.000.000</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-group-divider">
+                                    <tr class="bubble"> 
+                                        <th scope="row">Bubble Sort(melhorado)</th>
+                                        <td class="bom1">0.0004833</td>
+                                        <td class="bom2">0.004389</td>
+                                        <td class="bom3">0.0390283</td>
+                                        <td class="bom4">0.1933607</td>
+                                    </tr>
+                                    <tr class="select">
+                                        <th scope="row">SelectionSort</th>
+                                        <td class="bom1">0.0395172</td>
+                                        <td class="bom2">0.1438769</td>
+                                        <td class="bom3">271.8567817</td>
+                                        <td class="bom4">1282.1676655</td>
+                                    </tr>
+                                    <tr class="insert">
+                                        <th scope="row">InsertionSort</th>
+                                        <td class="bom1">0.0004833</td>
+                                        <td class="bom2">0.004389</td>
+                                        <td class="bom3">0.0390283</td>
+                                        <td class="bom4">0.1933607</td>
+                                    </tr>
+                                    <tr class="merg">
+                                        <th scope="row">MergeSort</th>
+                                        <td class="bom1">0.0597083</td>
+                                        <td class="bom2">1.1589879</td>
+                                        <td class="bom3">2103.9774235</td>
+                                        <td class="bom4">10905.2476831</td>
+                                    </tr>
+                                    <tr class="quic">
+                                        <th scope="row">QuickSort</th>
+                                        <td class="bom1">0.0104072</td>
+                                        <td class="bom2">0.0069883</td>
+                                        <td class="bom3">0.3392144</td>
+                                        <td class="bom4">0.6794286</td>
+                                    </tr>
+                                    <tr class="hea">
+                                        <th scope="row">HeapSort</th>
+                                        <td class="bom1">0.0127284</td>
+                                        <td class="bom2">0.0427259</td>
+                                        <td class="bom3">0.5023161</td>
+                                        <td class="bom4">0.7884551</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">ShellSort</th>
+                                        <td class="bom1">0.002998</td>
+                                        <td class="bom2">0.0406803</td>
+                                        <td class="bom3">0.2290975</td>
+                                        <td class="bom4">0.3457995</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">CoktailSort</th>
+                                        <td class="bom1">0.0003831</td>
+                                        <td class="bom2">0.0029929</td>
+                                        <td class="bom3">0.0572934</td>
+                                        <td class="bom4">0.0548303</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">GnomeSort</th>
+                                        <td class="bom1">0.0002855</td>
+                                        <td class="bom2">0.0033286</td>
+                                        <td class="bom3">0.0349889</td>
+                                        <td class="bom4">0.0491664</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">CombSort</th>
+                                        <td class="bom1">0.0076033</td>
+                                        <td class="bom2">0.0243928</td>
+                                        <td class="bom3">0.2316126</td>
+                                        <td class="bom4">0.5601168</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h5>Tabela de desenpenho:</h5>
+
+                        <div class="cards">
+                            <div id="grafico-bom"></div>
+                        </div>
+                    </div>
+                </section>
+
+
+            </div>
+
+        </section>
+        
+
+    </main>
+    <footer>
+        <div class="container">
+            <img src="src/img/if-p.png" alt="">
+        </div>
+    </footer>
+    <script src="src/js/bootstrap-js/bootstrap.bundle.js"></script>
+    <script src="src/js/bootstrap-js/bootstrap.js"></script>
+</body>
+</html>
