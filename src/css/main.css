@@ -81,3 +81,7 @@ pre code{
 ul{
     padding-left: 0;
 }
+
+.card-overflow{
+    overflow: auto;
+}
