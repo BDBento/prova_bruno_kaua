@@ -70,6 +70,9 @@ pre code{
     .container{
         --bs-gutter-x:0;
     }
+    .section-tabelas{
+        overflow: auto;
+    }
 }
 
 @media(max-width:1200px){
