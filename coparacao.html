@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="src/css/main.css">
     <link rel="stylesheet" href="src/css/footer.css">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="src/js/grafico-bom.js"></script>
+    <script src="src/js/grafico-compare.js"></script>
+
 
 </head>
 <body>
@@ -89,7 +90,7 @@
                 <p>O desempenho médio e o desempenho do pior caso são os mais utilizados na analíse de algoritmo. O menos usado é o desempenho do melhor caso. Porém existe uso para ele: por exemplo, quando se conhece os melhores casos das tarefas individuais, eles podem ser usados para melhorar a precisão da análise do pior caso. Cientistas da computação usam técnicas de análise probabilística, especialmente a do valor esperado, para determinar o tempos de execução esperado.</p>
  
            
-                <section id="section-tabelas" class="container section-tabelas">
+                <section class="container section-tabelas section-tabelas-bom">
                     <h5>Tabela de desenpenho para os casos bons :</h5>
                     <div class="">
                         <div class="cards card-overflow">
@@ -167,7 +168,7 @@
                                         <td class="bom3">0.0349889</td>
                                         <td class="bom4">0.0491664</td>
                                     </tr>
-                                    <tr class="comb">
+                                    <tr class="combo">
                                         <th scope="row">CombSort</th>
                                         <td class="bom1">0.0076033</td>
                                         <td class="bom2">0.0243928</td>
@@ -182,6 +183,198 @@
 
                         <div class="cards">
                             <div id="grafico-bom"></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="container section-tabelas section-tabelas-medio">
+                    <h5>Tabela de desenpenho para os casos medio :</h5>
+                    <div class="">
+                        <div class="cards card-overflow">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Metodo</th>
+                                        <th scope="col">1.000</th>
+                                        <th scope="col">10.000</th>
+                                        <th scope="col">500.000</th>
+                                        <th scope="col">1.000.000</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-group-divider">
+                                    <tr class="bubble"> 
+                                        <th scope="row">Bubble Sort(melhorado)</th>
+                                        <td class="medio1">0.0130364</td>
+                                        <td class="medio2">1.2210467</td>
+                                        <td class="medio3">6385.8889077</td>
+                                        <td class="medio4">25200</td>
+                                    </tr>
+                                    <tr class="select">
+                                        <th scope="row">SelectionSort</th>
+                                        <td class="medio1">0.0345794</td>
+                                        <td class="medio2">0.3685115</td>
+                                        <td class="medio3">2411.6839104</td>
+                                        <td class="medio4">6749.7445372</td>
+                                    </tr>
+                                    <tr class="insert">
+                                        <th scope="row">InsertionSort</th>
+                                        <td class="medio1">0.0349028</td>
+                                        <td class="medio2">0.1515631</td>
+                                        <td class="medio3">1409.825029</td>
+                                        <td class="medio4">4072.0237792</td>
+                                    </tr>
+                                    <tr class="merg">
+                                        <th scope="row">MergeSort</th>
+                                        <td class="medio1">0.0263602</td>
+                                        <td class="medio2">1.0561847</td>
+                                        <td class="medio3">2135.3927107</td>
+                                        <td class="medio4">10638.8583866</td>
+                                    </tr>
+                                    <tr class="quic">
+                                        <th scope="row">QuickSort</th>
+                                        <td class="medio1">0.0019946</td>
+                                        <td class="medio2">0.0112419</td>
+                                        <td class="medio3">0.6202614</td>
+                                        <td class="medio4">2.3110557</td>
+                                    </tr>
+                                    <tr class="hea">
+                                        <th scope="row">HeapSort</th>
+                                        <td class="medio1">0.0023638</td>
+                                        <td class="medio2">0.0131837</td>
+                                        <td class="medio3">1.047212</td>
+                                        <td class="medio4">1.5117239</td>
+                                    </tr>
+                                    <tr class="shel">
+                                        <th scope="row">ShellSort</th>
+                                        <td class="medio1">0.0059424</td>
+                                        <td class="medio2">0.0371491</td>
+                                        <td class="medio3">0.6072589</td>
+                                        <td class="medio4">1.1689568</td>
+                                    </tr>
+                                    <tr class="cok">
+                                        <th scope="row">CoktailSort</th>
+                                        <td class="medio1">0.0848066</td>
+                                        <td class="medio2">1.2535177</td>
+                                        <td class="medio3">3326.2983418</td>
+                                        <td class="medio4">22083.4725909</td>
+                                    </tr>
+                                    <tr class="gnom">
+                                        <th scope="row">GnomeSort</th>
+                                        <td class="medio1">0.0557882</td>
+                                        <td class="medio2">1.7405212</td>
+                                        <td class="medio3">3230.6410174</td>
+                                        <td class="medio4">22408.106589</td>
+                                    </tr>
+                                    <tr class="combo">
+                                        <th scope="row">CombSort</th>
+                                        <td class="medio1">0.0127633</td>
+                                        <td class="medio2">0.0501746</td>
+                                        <td class="medio3">0.901244</td>
+                                        <td class="medio4">1.593207</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h5>Tabela de desenpenho:</h5>
+
+                        <div class="cards">
+                            <div id="grafico-medio"></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="container section-tabelas section-tabelas-ruim">
+                    <h5>Tabela de desenpenho para os casos ruim :</h5>
+                    <div class="">
+                        <div class="cards card-overflow">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Metodo</th>
+                                        <th scope="col">1.000</th>
+                                        <th scope="col">10.000</th>
+                                        <th scope="col">500.000</th>
+                                        <th scope="col">1.000.000</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-group-divider">
+                                    <tr class="bubble"> 
+                                        <th scope="row">Bubble Sort(melhorado)</th>
+                                        <td class="ruim1">0.0302035</td>
+                                        <td class="ruim2">0.6685959</td>
+                                        <td class="ruim3">1482.5317544</td>
+                                        <td class="ruim4">24200</td>
+                                    </tr>
+                                    <tr class="select">
+                                        <th scope="row">SelectionSort</th>
+                                        <td class="ruim1">0.0021276</td>
+                                        <td class="ruim2">0.1964097</td>
+                                        <td class="ruim3">543.8211861</td>
+                                        <td class="ruim4">2284.7899298</td>
+                                    </tr>
+                                    <tr class="insert">
+                                        <th scope="row">InsertionSort</th>
+                                        <td class="ruim1">0.0534072</td>
+                                        <td class="ruim2">0.2236758</td>
+                                        <td class="ruim3">538.7942957</td>
+                                        <td class="ruim4">2188.9588711</td>
+                                    </tr>
+                                    <tr class="merg">
+                                        <th scope="row">MergeSort</th>
+                                        <td class="ruim1">0.0105934</td>
+                                        <td class="ruim2">0.8276113</td>
+                                        <td class="ruim3">2082.6098942</td>
+                                        <td class="ruim4">12852.540375</td>
+                                    </tr>
+                                    <tr class="quic">
+                                        <th scope="row">QuickSort</th>
+                                        <td class="ruim1">0.0007434</td>
+                                        <td class="ruim2">0.005765</td>
+                                        <td class="ruim3">0.330906</td>
+                                        <td class="ruim4">0.6851811</td>
+                                    </tr>
+                                    <tr class="hea">
+                                        <th scope="row">HeapSort</th>
+                                        <td class="ruim1">0.002532</td>
+                                        <td class="ruim2">0.0106745</td>
+                                        <td class="ruim3">0.5357476</td>
+                                        <td class="ruim4">0.6776987</td>
+                                    </tr>
+                                    <tr class="shel">
+                                        <th scope="row">ShellSort</th>
+                                        <td class="ruim1">0.0037655</td>
+                                        <td class="ruim2">0.0034402</td>
+                                        <td class="ruim3">0.2805287</td>
+                                        <td class="ruim4">0.2654818</td>
+                                    </tr>
+                                    <tr class="cok">
+                                        <th scope="row">CoktailSort</th>
+                                        <td class="ruim1">0.0180384</td>
+                                        <td class="ruim2">1.1849084</td>
+                                        <td class="ruim3">3540.48832</td>
+                                        <td class="ruim4">13632.9493919</td>
+                                    </tr>
+                                    <tr class="gnom">
+                                        <th scope="row">GnomeSort</th>
+                                        <td class="ruim1">0.0461259</td>
+                                        <td class="ruim2">2.2670075</td>
+                                        <td class="ruim3">3103.5219037</td>
+                                        <td class="ruim4">13875.323045</td>
+                                    </tr>
+                                    <tr class="combo">
+                                        <th scope="row">CombSort</th>
+                                        <td class="ruim1">0.0072652</td>
+                                        <td class="ruim2">0.0043971</td>
+                                        <td class="ruim3">0.3268619</td>
+                                        <td class="ruim4">0.5950744</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h5>Tabela de desenpenho:</h5>
+
+                        <div class="cards">
+                            <div id="grafico-ruim"></div>
                         </div>
                     </div>
                 </section>
