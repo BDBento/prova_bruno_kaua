@@ -65,6 +65,7 @@ pre code{
     }
     .table{
         font-size: 0.7em;
+        overflow: auto;
     }
     .container{
         --bs-gutter-x:0;
