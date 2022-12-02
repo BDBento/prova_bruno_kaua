@@ -72,6 +72,7 @@ pre code{
     }
     .section-tabelas{
         overflow: auto;
+        max-width: 350px;
     }
 }
 
