@@ -33,23 +33,43 @@ function graf() {
     let bom22 = parseFloat(document.querySelector('.insert .bom2').textContent);
     let bom32 = parseFloat(document.querySelector('.insert .bom3').textContent);
     let bom42 = parseFloat(document.querySelector('.insert .bom4').textContent);
-
+    // merge
     let bom13 = parseFloat(document.querySelector('.merg .bom1').textContent);
     let bom23 = parseFloat(document.querySelector('.merg .bom2').textContent);
     let bom33 = parseFloat(document.querySelector('.merg .bom3').textContent);
     let bom43 = parseFloat(document.querySelector('.merg .bom4').textContent);
-
+    // quick
     let bom14 = parseFloat(document.querySelector('.quic .bom1').textContent);
     let bom24 = parseFloat(document.querySelector('.quic .bom2').textContent);
     let bom34 = parseFloat(document.querySelector('.quic .bom3').textContent);
     let bom44 = parseFloat(document.querySelector('.quic .bom4').textContent);
-
+    //heap
     let bom15 = parseFloat(document.querySelector('.hea .bom1').textContent);
     let bom25 = parseFloat(document.querySelector('.hea .bom2').textContent);
     let bom35 = parseFloat(document.querySelector('.hea .bom3').textContent);
     let bom45 = parseFloat(document.querySelector('.hea .bom4').textContent);
-  
+    //ShellSort
+    let bom16 = parseFloat(document.querySelector('.shel .bom1').textContent);
+    let bom26 = parseFloat(document.querySelector('.shel .bom2').textContent);
+    let bom36 = parseFloat(document.querySelector('.shel .bom3').textContent);
+    let bom46 = parseFloat(document.querySelector('.shel .bom4').textContent);
+    //CoktailSort
+    let bom17 = parseFloat(document.querySelector('.cok .bom1').textContent);
+    let bom27 = parseFloat(document.querySelector('.cok .bom2').textContent);
+    let bom37 = parseFloat(document.querySelector('.cok .bom3').textContent);
+    let bom47 = parseFloat(document.querySelector('.cok .bom4').textContent);
+    //GnomeSort
+    let bom18 = parseFloat(document.querySelector('.gnom .bom1').textContent);
+    let bom28 = parseFloat(document.querySelector('.gnom .bom2').textContent);
+    let bom38 = parseFloat(document.querySelector('.gnom .bom3').textContent);
+    let bom48 = parseFloat(document.querySelector('.gnom .bom4').textContent);
+    //CombSort
+    let bom19 = parseFloat(document.querySelector('.comb .bom1').textContent);
+    let bom29 = parseFloat(document.querySelector('.comb .bom2').textContent);
+    let bom39 = parseFloat(document.querySelector('.comb .bom3').textContent);
+    let bom49 = parseFloat(document.querySelector('.comb .bom4').textContent);
 
+    
     var data = new google.visualization.DataTable();
       data.addColumn('number', 'interacoes');
       data.addColumn('number', 'Bubble Sort(melhorado)');
