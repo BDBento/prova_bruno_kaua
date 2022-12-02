@@ -1,6 +1,4 @@
-
-google.charts.load('current', {'packages':['corechart']});
-
+google.charts.load('current', {'packages':['line']});
 google.charts.setOnLoadCallback(graf);
 
 let options = {
@@ -8,11 +6,13 @@ let options = {
         title: '',
         subtitle: ''
       },
-        height: 800,
-      axes: {
+        height: 600,
+      vAxes: {
         
         x: {
-          10: {side: 'top'}
+          0: {side: 'top'},
+          scaleType: 'log',
+
         }
       }
 };
@@ -78,14 +78,18 @@ function graf() {
       data.addColumn('number', 'MergeSort');
       data.addColumn('number', 'QuickSort');
       data.addColumn('number', 'HeapSort');
+      data.addColumn('number', 'ShellSort');
+      data.addColumn('number', 'CoktailSort');
+      data.addColumn('number', 'GnomeSort');
+      data.addColumn('number', 'CombSort');
 
       data.addRows([
-        [1000,     bom1, bom11, bom12 , bom13, bom14, bom15],
-        [10000,    bom2, bom21, bom22 , bom23, bom24, bom25],
-        [500000,   bom3, bom31, bom32 , bom33, bom34, bom35],
-        [1000000 , bom4, bom41, bom42 , bom43, bom44, bom45]
+        [1000,     bom1, bom11, bom12 , bom13, bom14, bom15, bom16, bom17, bom18, bom19],
+        [10000,    bom2, bom21, bom22 , bom23, bom24, bom25, bom26, bom27, bom28, bom29],
+        [500000,   bom3, bom31, bom32 , bom33, bom34, bom35, bom36, bom37, bom38, bom39],
+        [1000000 , bom4, bom41, bom42 , bom43, bom44, bom45, bom46, bom47, bom48, bom49]
     ]);
-    var chart = new google.visualization.LineChart(document.getElementById('grafico-bom'));
 
-    chart.draw(data, options);
+    var chart = new google.charts.Line(document.getElementById('grafico-bom'));
+    chart.draw(data, google.charts.Line.convertOptions(options));
 }
