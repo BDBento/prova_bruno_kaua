@@ -73,6 +73,7 @@ pre code{
     .cards{
         overflow: auto;
     }
+    
 }
 
 @media(max-width:1200px){
