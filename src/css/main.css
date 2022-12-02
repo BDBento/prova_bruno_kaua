@@ -58,7 +58,7 @@ pre code{
     
     .bloco__principal-corpo{
         width: 100vw;
-        padding: 10px;
+        padding: 0px;
     }
     #curve_chart{
         width: 100%;
