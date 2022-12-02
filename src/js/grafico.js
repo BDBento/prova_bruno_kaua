@@ -1,5 +1,5 @@
 
-google.charts.load('current', {'packages':['corechart']});
+google.charts.load('current', {'packages':['line']});
 google.charts.setOnLoadCallback(graf);
 
 let options = {
@@ -27,14 +27,14 @@ function graf() {
     let ruim4 = parseFloat(document.querySelector('.ruim4').textContent);
 
     var data = google.visualization.arrayToDataTable([
-        ['Year',        'Bom',     'Medio',    'ruim'],
+        ['interacaoes',        'Bom',     'Medio',    'ruim'],
         ['1000',         bom1,      medio1,     ruim1],
         ['10.000',       bom2,      medio2,     ruim2],
         ['500.000',      bom3,      medio3,     ruim3],
         ['1.000.000',    bom4,      medio4,     ruim4]
     ]);
 
-    var chart = new google.visualization.LineChart(document.getElementById('grafico'));
-
-    chart.draw(data, options);
+   
+    var chart = new google.charts.Line(document.getElementById('grafico'));
+    chart.draw(data, google.charts.Line.convertOptions(options));
 }
