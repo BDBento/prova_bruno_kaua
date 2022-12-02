@@ -5,7 +5,7 @@ main{
     background: url(/src/img/06-18.png) no-repeat fixed;
 }
 .bloco__principal-corpo{
-    padding: 30px;
+    padding: 80px;
     background-color: rgb(223, 221, 221);
     font-family: 'Times New Roman', Times, serif;
     z-index: 0; 
