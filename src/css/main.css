@@ -50,8 +50,9 @@ pre code{
     border-radius: 4px;
 }
 .bloco-compare{
-    border: gray solid 1px;
-    padding-bottom: 40px;
+    border-bottom: rgb(177, 177, 177) solid 3px;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
 }
 
 @media (max-width:750px){
