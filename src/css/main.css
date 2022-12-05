@@ -49,6 +49,10 @@ pre code{
     background-color: #fff;
     border-radius: 4px;
 }
+.bloco-compare{
+    border: gray solid 1px;
+    padding-bottom: 40px;
+}
 
 @media (max-width:750px){
     .bloco__principal{
@@ -91,3 +95,4 @@ ul{
 .card-overflow{
     overflow: auto;
 }
+
