@@ -90,6 +90,9 @@ a .pg-selecionada{
 .comb{
     background:url(../img/combo.jpeg) center/cover no-repeat;
 }
+.comparacao{
+    background:url(../img/lampadas.jpg) center/cover no-repeat;
+}
 
 .logo{
     width: 10em;
