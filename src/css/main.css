@@ -51,8 +51,8 @@ pre code{
 }
 .bloco-compare{
     border-bottom: rgb(177, 177, 177) solid 3px;
-    padding-bottom: 2em;
-    margin-bottom: 2em;
+    padding-bottom: 3em;
+    margin-bottom: 3em;
 }
 
 @media (max-width:750px){
