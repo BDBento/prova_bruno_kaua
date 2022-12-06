@@ -5,8 +5,8 @@ google.charts.setOnLoadCallback(graf_r);
 
 let options = {
     chart: {
-        title: '',
-        subtitle: ''
+        title: 'comparacoes',
+        subtitle: 'Tempo de execucao VS Quantidade de interacoes'
       },
         height: 500,
       vAxes: {
