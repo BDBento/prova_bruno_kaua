@@ -27,7 +27,7 @@ function graf() {
     let ruim4 = parseFloat(document.querySelector('.ruim4').textContent);
 
     var data = google.visualization.arrayToDataTable([
-        ['interacaoes',        'Bom',     'Medio',    'ruim'],
+        ['Qtd de nº no Array',        'Bom',     'Medio',    'ruim'],
         ['1000',         bom1,      medio1,     ruim1],
         ['10.000',       bom2,      medio2,     ruim2],
         ['500.000',      bom3,      medio3,     ruim3],
