@@ -6,7 +6,7 @@ google.charts.setOnLoadCallback(graf_r);
 let options = {
     chart: {
         title: 'comparacoes',
-        subtitle: 'Tempo de execucao(em segundos) VS Quantidade de interacoes'
+        subtitle: 'Tempo de execucao(em segundos) VS Qtd de nº no array'
       },
         height: 500,
       vAxes: {
@@ -72,7 +72,7 @@ function graf_b() {
 
 
       var data = google.visualization.arrayToDataTable([[
-        'interacaoes',
+        'Qtd de nº no array',
         'Bubble Sort(melhorado)',
         'SelectionSort',
         'InsertionSort',
@@ -147,7 +147,7 @@ let medio49 = parseFloat(document.querySelector('.combo .medio4').textContent);
 
 
 var data = google.visualization.arrayToDataTable([[
-'interacaoes',
+'Qtd de nº no array',
 'Bubble Sort(melhorado)',
 'SelectionSort',
 'InsertionSort',
@@ -222,7 +222,7 @@ let ruim49 = parseFloat(document.querySelector('.combo .ruim4').textContent);
 
 
 var data = google.visualization.arrayToDataTable([[
-'interacaoes',
+'Qtd de nº no array',
 'Bubble Sort(melhorado)',
 'SelectionSort',
 'InsertionSort',
