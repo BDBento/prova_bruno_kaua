@@ -5,7 +5,7 @@ google.charts.setOnLoadCallback(graf_r);
 
 let options = {
     chart: {
-        title: 'comparacoes',
+        title: 'Comparacoes',
         subtitle: 'Tempo de execucao(em segundos) VS Qtd de nº no array'
       },
         height: 500,
